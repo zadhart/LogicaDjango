@@ -27,14 +27,7 @@ SECRET_KEY = 'g(sbyer@wxd$7zstkomarkd06wkdp(cvy!c(0gy2owfaruke_md=0*u-2lc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-import socket
-
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.connect(("8.8.8.8", 80))
-
-ALLOWED_HOSTS = [s.getsockname()[0], '127.0.0.1', 'localhost']
-s.close()
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
